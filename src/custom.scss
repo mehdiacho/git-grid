@@ -1,0 +1,65 @@
+// Custom variables
+$primary: #2D6CDF;
+$secondary: #6c757d;
+$success: #28a746;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #222324;
+$color-scheme: light dark;
+$body-color: rgba(255, 255, 255, 0.87);
+$body-bg: #22272e; // GitHub dark theme background
+
+// Rest of your Bootstrap imports remain the same
+@use "bootstrap/scss/bootstrap" with (
+  $primary: $primary,
+  $secondary: $secondary,
+  $success: $success,
+  $info: $info,
+  $warning: $warning,
+  $danger: $danger,
+  $light: $light,
+  $dark: $dark,
+  $body-color: $body-color,
+  $body-bg: $body-bg,
+);
+
+// After your Bootstrap imports
+:root {
+  --bamboo-gradient: linear-gradient(
+    135deg,
+    #2d5a27 0%,
+    #28a746 35%,
+    #1f8435 65%,
+    #184d20 100%
+  );
+  
+  // GitHub contribution colors
+  --contribution-none: #161b22;
+  --contribution-level1: #0e4429;
+  --contribution-level2: #006d32;
+  --contribution-level3: #26a641;
+  --contribution-level4: #39d353;
+}
+
+// Contribution level classes
+.level-0 {
+  background-color: var(--contribution-none);
+}
+
+.level-1 {
+  background-color: var(--contribution-level1);
+}
+
+.level-2 {
+  background-color: var(--contribution-level2);
+}
+
+.level-3 {
+  background-color: var(--contribution-level3);
+}
+
+.level-4 {
+  background-color: var(--contribution-level4);
+}
